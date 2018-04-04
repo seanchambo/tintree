@@ -35,15 +35,12 @@ class Tree extends React.Component {
 
 
   moveNode(itemId, dragId, hoverId) {
-    console.log(`Moving: ${itemId}, From: ${dragId}, To: ${hoverId}`);
     const { rootNode } = this.state;
     const dupRootNode = { ...rootNode };
 
     const oldNode = findNode(dragId, dupRootNode);
     const newNode = findNode(hoverId, dupRootNode);
     const item = oldNode.children.find(child => child.id === itemId);
-
-    console.log('Old Node:', oldNode, 'New Node:', newNode, 'Item: ', item);
 
     newNode.children = [item, ...newNode.children];
     oldNode.children = oldNode.children.filter(child => child.id !== itemId);

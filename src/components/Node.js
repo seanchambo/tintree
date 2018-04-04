@@ -15,11 +15,8 @@ const nodeSource = {
     const didDrop = monitor.didDrop();
 
     if (!didDrop) {
-      props.onDrop(itemId, dragId, -1);
+      props.onDrop(itemId, dragId);
     }
-  },
-  canDrag(props) {
-    return !!props.parentId;
   },
   isDragging(props, monitor) {
     return monitor.getItem().id === props.data.id;

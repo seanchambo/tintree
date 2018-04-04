@@ -49,7 +49,6 @@ const App = () => {
         nodeComponent={Node}
         childContainerComponent={ChildContainer}
         rootNode={{
-          id: -1,
           children: [{
             id: 1,
             children: [{
