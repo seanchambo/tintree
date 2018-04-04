@@ -80,7 +80,10 @@ class Node extends React.Component {
         }
         {
           !!childNodes.length &&
-            <this.props.childContainerComponent>
+            <this.props.childContainerComponent
+              isRoot={root}
+              isDragging={isDragging}
+              isParentDragging={isParentDragging}>
               { childNodes.map(node => (<NodeDragDrop
                 key={data.id}
                 root={false}
