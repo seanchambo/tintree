@@ -85,7 +85,7 @@ class Node extends React.Component {
               isDragging={isDragging}
               isParentDragging={isParentDragging}>
               { childNodes.map(node => (<NodeDragDrop
-                key={data.id}
+                key={node.id}
                 root={false}
                 data={node}
                 parentId={data.id}
